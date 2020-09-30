@@ -69,8 +69,6 @@ function Home() {
           <Text style={styles.text2}>Frigorífico São Bento...</Text>
         </View>
         
-
-
         <View style={styles.industriaGeral}>
           <Image source={quest}/>
 
