@@ -17,40 +17,41 @@ function Landing() {
     return (
 
         
-        <View style={styles.container}>  
+        <View style={styles.container}>
+
             <ImageBackground 
-         source={require('../../assets/images/landingFundo.png')}
-         style={styles.container}
-         imageStyle={{width: 410, height: 308.64, position: 'absolute', left: 0, top: 0}}
-         >  
-
-            <View style={styles.logo}>
-                <Image source={landingImg} />
-            </View> 
-
-           <View style={styles.title}>
-                <Text style={styles.title1}>
-                Bem vindo {'\n'}
-                <Text style={styles.title2}>Acesse para continuar</Text>
-                </Text>
-            </View>
-
-            <View>
-            <TextInput
-            style={styles.input}
-            placeholder="Senha" 
-            />
-            </View>
-            
+                source={require('../../assets/images/landingFundo.png')}
+                style={styles.container}
+                imageStyle={{width: '100%', height: 308.64, left: 0, top: 0}}
+            >  
 
 
-            <RectButton 
-                style={styles.button}
-                onPress={handleNavigateToHomePage}
-            >
-                    <Text style={styles.login}>LOGIN</Text>
+                <View style={styles.container2}>
 
-            </RectButton>
+                    <View style={styles.containertopo}>
+                        <View style={styles.logo}>
+                            <Image source={landingImg} />
+                        </View> 
+                    </View>
+
+
+                    <View style={styles.containerbottom}>
+
+                        <Text style={styles.title1}>Bem vindo</Text>
+                        <Text style={styles.title2}>Acesse para continuar</Text>
+
+                        <View>
+                            <TextInput style={styles.input} placeholder="Senha" />
+                        </View>
+
+                        <RectButton  style={styles.button} onPress={handleNavigateToHomePage}>
+                            <Text style={styles.login}>LOGIN</Text>
+                        </RectButton>
+                    </View>
+
+
+                </View>
+
             </ImageBackground>
             
         </View>

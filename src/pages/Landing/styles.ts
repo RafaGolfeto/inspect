@@ -2,28 +2,27 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#FFF',
+        flex: 1
+    },
+
+    container2: {
         flex: 1,
-        width: 410,
-        height: 676
+        padding: 30,
+        justifyContent: 'space-between'
+    },
+
+    containertopo: {
+        marginTop: 80
+    },
+
+    containerbottom: {
+        marginBottom: 20
     },
 
     logo: {
-        position: 'absolute',
         height: 72,
-        left: 60,
-        top: 110.26,
         width: 255,
-    },
-
-    title: {
-        position: 'absolute',
-        width: 203,
-        height: 63,
-        left: 40,
-        top: 355,
-        
-        
     },
 
     title1: {
@@ -41,40 +40,32 @@ const styles = StyleSheet.create({
         fontStyle: 'normal',
         fontSize: 18,
         alignItems: 'center',
+        marginBottom: 30
         
     },
 
     input: {
-        position: 'absolute',
-        padding: 15,
-        left: 15,
-        right: 15,
-        marginTop: 570,
+        paddingHorizontal: 20,
+        paddingVertical: 15,
         borderWidth: 1,
         borderColor: '#b3b3b3',
         backgroundColor: '#FFFFFF',
-        borderRadius: 10
+        borderRadius: 10,
+        fontSize: 16,
+        marginBottom: 24
     },
 
     button: {
-        position: 'absolute',
-        left: 15 ,
-        right: 15,
-        top: '78.11%',
-        bottom: '14.5%',
         backgroundColor: '#179250',
-        borderRadius: 77
+        borderRadius: 77,
     },
 
     login: {
-        left: '42.93%',
-        right: '42.67%',
-        top: '30.33%',
-        bottom: '16.72%',
-
         fontFamily: 'Montserrat_700Bold',
         color: '#FFFFFF',
         fontSize: 16,
+        textAlign: 'center',
+        padding: 15
     }
 
 });
