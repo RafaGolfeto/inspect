@@ -1,8 +1,10 @@
 import React from 'react';
 import { Image, Text, View } from 'react-native';
+import { useNavigation  } from '@react-navigation/native';
+import { RectButton } from 'react-native-gesture-handler';
 
 import home from '../../assets/images/logoHome.png';
-import proximo from '../../assets/images/icons/proximo.png'
+import voltarHome from '../../assets/images/icons/voltarHome.png'
 import questionario from '../../assets/images/icons/questionario.png';
 import inspecionar from '../../assets/images/icons/inspecionar.png';
 import quest from '../../assets/images/quest.png';
@@ -11,6 +13,22 @@ import styles from './styles';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
 function Home() {
+
+  const {navigate} = useNavigation();
+
+  function handleNavigateToQuestPage() {
+    navigate('Quest')
+  }
+
+  function handleNavigateToInspencionarPage() {
+    navigate('Inspencionar')
+  }
+
+  function handleNavigateToLandingPage() {
+    navigate('Landing')
+  }
+
+
     return <View style={styles.container}>
 
       
@@ -18,8 +36,12 @@ function Home() {
         <Image source={home} style={styles.logo}>
         </Image>
 
-        <Image source={proximo} style={styles.proximo}>
+        <RectButton
+        onPress={handleNavigateToLandingPage} 
+        style={styles.voltarHome}>
+          <Image source={voltarHome} >
         </Image>
+        </RectButton>
 
           <Text style={styles.h1}>
           Escolha umas das{"\n"} opções para Começar
@@ -33,19 +55,24 @@ function Home() {
       </View>
 
         <View style={styles.buttons}>
-            <TouchableOpacity style={styles.button1}>
+
+            <RectButton 
+            onPress={handleNavigateToQuestPage} 
+            style={styles.button1}>
               <Image source={questionario} style={styles.imagem1}>
 
               </Image>
-              <Text style={styles.textbutton1}> Questionário</Text>
-            </TouchableOpacity>
+              <Text style={styles.textbutton1}> Questionários</Text>
+            </RectButton>
 
-            <TouchableOpacity style={styles.button2}>
+            <RectButton 
+            onPress={handleNavigateToInspencionarPage}
+            style={styles.button2}>
               <Image source={inspecionar} style={styles.imagem2}>
 
               </Image>
               <Text style={styles.textbutton2}>inspecionar</Text>
-            </TouchableOpacity>
+            </RectButton>
         </View>
 
         <View style={styles.inspecoes32}>
@@ -58,6 +85,12 @@ function Home() {
           <Image source={quest} />
 
           <Text style={styles.text1}>Centro de distribuição</Text>
+          <Text style={styles.data}>01/09/2020 às 15:45</Text>
+
+          <View style={styles.divisor} />
+
+          <Text style={styles.total}>Total</Text>
+          <Text style={styles.totalnum}>45</Text>
 
         </View>
 
@@ -67,18 +100,36 @@ function Home() {
           <Image source={quest} />
 
           <Text style={styles.text2}>Frigorífico São Bento...</Text>
+          <Text style={styles.data}>01/09/2020 às 15:45</Text>
+
+          <View style={styles.divisor} />
+
+          <Text style={styles.total}>Total</Text>
+          <Text style={styles.totalnum}>45</Text>
         </View>
         
         <View style={styles.industriaGeral}>
           <Image source={quest}/>
 
           <Text style={styles.text3}>Indústria Geral do...</Text>
+          <Text style={styles.data}>01/09/2020 às 15:45</Text>
+
+          <View style={styles.divisor} />
+
+          <Text style={styles.total}>Total</Text>
+          <Text style={styles.totalnum}>45</Text>
         </View>
 
         <View style={styles.outros}>
           <Image source={quest} />
 
           <Text style={styles.text4}>Outros...</Text>
+          <Text style={styles.data}>01/09/2020 às 15:45</Text>
+
+          <View style={styles.divisor} />
+
+          <Text style={styles.total}>Total</Text>
+          <Text style={styles.totalnum}>45</Text>
         </View>
 </View>
       

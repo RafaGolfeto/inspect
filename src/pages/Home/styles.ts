@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#179250',
         flex: 0,
         width: 415,
-        height: 250,
+        height: 260,
         left: 0,
         top: 0,
         borderBottomLeftRadius: 40,
@@ -37,39 +37,38 @@ const styles = StyleSheet.create({
 
     logo: {
         position:'absolute',
-        width: 38.69,
-        height: 38.69,
-        left: 28,
+        width: 50,
+        height: 50,
+        left: 24,
         top: 28
     },
 
-    proximo: {
-        position: 'absolute',
+    voltarHome: {
         width: 18,
         height: 18,
-        left: 330,
+        left: 368,
         top: 36
     },
 
     pesquisa: {
         position: 'absolute',
+        width: 360,
+        height: 50,
+        padding: 15,
         left: 28,
-        right: 28,
-        top: 190,
-        bottom: 10,
-        marginBottom: 15,
+        top: 180,
         borderRadius: 10,
         backgroundColor: '#FFFFFF'
     },
 
     buttons: {
         flexDirection: 'row',
-        marginTop: 40,
+        marginTop: -20,
         justifyContent: 'space-between'
     },
 
     button1: {
-        width: 152,
+        width: 170,
         height: 109,
         left: 28,
         top: 50,
@@ -80,7 +79,7 @@ const styles = StyleSheet.create({
     },
 
     imagem1: {
-        left: 65,
+        left: 75,
         top: 25
     },
     
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
 
     button2: {
         
-        width: 152,
+        width: 170,
         height: 109,
         left: -28,
         top: 50,
@@ -113,14 +112,14 @@ const styles = StyleSheet.create({
     },
 
     imagem2: {
-        left: 65,
+        left: 74,
         top: 25
     },
 
     textbutton2: {
         width: 115,
         height: 50,
-        left: 20,
+        left: 24,
 
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 14,
@@ -170,7 +169,7 @@ const styles = StyleSheet.create({
 
     text1: {
         height: 17,
-        left: 100,
+        left: 70,
         top: -50,
 
         fontFamily: 'Montserrat_600SemiBold',
@@ -191,7 +190,7 @@ const styles = StyleSheet.create({
 
     text2: {
         height: 17,
-        left: 100,
+        left: 70,
         top: -50,
 
         fontFamily: 'Montserrat_600SemiBold',
@@ -212,7 +211,7 @@ const styles = StyleSheet.create({
 
     text3: {
         height: 17,
-        left: 100,
+        left: 70,
         top: -50,
 
         fontFamily: 'Montserrat_600SemiBold',
@@ -233,7 +232,7 @@ const styles = StyleSheet.create({
 
     text4: {
         height: 17,
-        left: 100,
+        left: 70,
         top: -50,
 
         fontFamily: 'Montserrat_600SemiBold',
@@ -241,6 +240,55 @@ const styles = StyleSheet.create({
         lineHeight: 17,
         alignItems: 'center'
 
+    },
+
+    data: {
+        color: '#7a7b7d',
+        left: 70,
+        bottom: 45,
+
+        fontFamily: 'Montserrat_500Medium',
+        fontStyle: 'normal',
+        fontWeight: "500",
+        fontSize: 9,
+        lineHeight: 11,
+        alignItems: 'center'
+        
+    },
+
+    divisor: {
+        borderBottomColor: '#abacaf',
+        borderBottomWidth: 1,
+        borderRadius: 1,
+        transform: [{rotate: '90deg'}],
+        width: 28,
+        height: 10,
+        left: 278,
+        bottom: 70
+
+    },
+
+    total: {
+        color: '#7a7b7d',
+        left: 300,
+        bottom: 95,
+
+        fontFamily: 'Montserrat_600SemiBold',
+        fontStyle: 'normal',
+        fontWeight: "600",
+        fontSize: 10,
+        lineHeight: 12,
+        alignItems: 'center'
+    },
+
+    totalnum: {
+        color: '#179250',
+        left: 300,
+        bottom: 95,
+        
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 20,
+        alignItems: 'center'
     },
 });
 
