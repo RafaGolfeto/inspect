@@ -40,9 +40,9 @@ function Landing() {
                         <Text style={styles.title1}>Bem vindo</Text>
                         <Text style={styles.title2}>Acesse para continuar</Text>
 
-                        <View>
+                        <KeyboardAvoidingView>
                             <TextInput style={styles.input} placeholder="Senha" />
-                        </View>
+                        </KeyboardAvoidingView>
 
                         <RectButton  style={styles.button} onPress={handleNavigateToHomePage}>
                             <Text style={styles.login}>LOGIN</Text>

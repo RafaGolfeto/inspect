@@ -3,180 +3,121 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create ({
         container: {
             backgroundColor: '#ffffff',
-            height: 900
+            flex: 1,
         },
         
         header: {
             backgroundColor: '#179250',
-            flex: 0,
-            width: 415,
-            height: 100,
-            left: 0,
-            top: 0
+            padding: 26,
+            marginBottom: 7
+        },
+
+        botaoTextoLogo: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
         },
     
         logo: {
             width: 50,
             height: 50,
-            left: 335,
-            top: 28
         },
 
         h1: {
-            height: 24,
-            left: 115,
-            top: -10,
-    
             fontFamily: 'Montserrat_700Bold',
             fontSize: 20,
             lineHeight: 24,
-            display: 'flex',
-            alignItems: 'center',
             color: '#FFFFFF' 
         },
     
         voltar: {
             width: 14,
             height: 14,
-            left: 28,
-            bottom: 28
         },
-    
-        textoCorpo: {
-            width: 279,
-            height: 48,
-            left: 28,
-            top: 35,
-            justifyContent: 'space-between'
+
+        inputAndButton: {
+            padding: 28
         },
         
         nomeDaEmpresa: {
-            position: 'absolute',
-            padding: 15,
-            left: 28,
-            right: 30,
-            top: 35,
+            paddingHorizontal: 20,
+            paddingVertical: 15,
             borderWidth: 1,
             borderColor: '#b3b3b3',
             backgroundColor: '#FFFFFF',
             borderRadius: 10,
-
-            fontFamily: 'Montserrat_500Medium',
             fontSize: 16,
-            lineHeight: 20,
-            alignItems: 'center', 
+            marginBottom: 15
         },
         
         selecionarUmQuestionário: {
-            position: 'absolute',
-            padding: 15,
-            left: 28,
-            right: 30,
-            top: 115,
+            paddingHorizontal: 20,
+            paddingVertical: 15,
             borderWidth: 1,
             borderColor: '#b3b3b3',
             backgroundColor: '#FFFFFF',
             borderRadius: 10,
-
-            fontFamily: 'Montserrat_500Medium',
             fontSize: 16,
-            lineHeight: 20,
-            alignItems: 'center', 
+            marginBottom: 15
         },
         
         informeALocalização: {
-            position: 'absolute',
-            padding: 15,
-            left: 28,
-            right: 30,
-            top: 195,
+            paddingHorizontal: 20,
+            paddingVertical: 15,
             borderWidth: 1,
             borderColor: '#b3b3b3',
             backgroundColor: '#FFFFFF',
             borderRadius: 10,
-
-            fontFamily: 'Montserrat_500Medium',
             fontSize: 16,
-            lineHeight: 20,
-            alignItems: 'center', 
+            marginBottom: 15
         },
         
         dataDaInspeção: {
-            position: 'absolute',
-            padding: 15,
-            left: 28,
-            right: 30,
-            top: 275,
+            paddingHorizontal: 20,
+            paddingVertical: 15,
             borderWidth: 1,
             borderColor: '#b3b3b3',
             backgroundColor: '#FFFFFF',
             borderRadius: 10,
-
-            fontFamily: 'Montserrat_500Medium',
             fontSize: 16,
-            lineHeight: 20,
-            alignItems: 'center', 
+            marginBottom: 15
         },
         
         fotoDoLocal: {
-            position: 'absolute',
-            padding: 15,
-            left: 28,
-            right: 30,
-            top: 355,
+            paddingHorizontal: 20,
+            paddingVertical: 15,
             borderWidth: 1,
             borderColor: '#b3b3b3',
             backgroundColor: '#FFFFFF',
             borderRadius: 10,
-
-            fontFamily: 'Montserrat_500Medium',
             fontSize: 16,
-            lineHeight: 20,
-            alignItems: 'center', 
+            marginBottom: 15
         },
         
-        informeUmaObservação: {
-            position: 'absolute',
-            paddingTop: 15,
-            paddingRight: 15,
-            paddingLeft: 15,
-            paddingBottom: 80,
-            left: 28,
-            right: 30,
-            top: 435,
+        informeUmaObservação: {  
+            paddingBottom: 72,         
+            paddingHorizontal: 20,
+            paddingVertical: 15,
             borderWidth: 1,
             borderColor: '#b3b3b3',
             backgroundColor: '#FFFFFF',
             borderRadius: 10,
-
-            fontFamily: 'Montserrat_500Medium',
             fontSize: 16,
-            lineHeight: 20,
-            alignItems: 'center', 
+            marginBottom: 30
         },
 
         button: {
-            position: 'absolute',
-            width: 355,
-            height: 60,
-            left: 28 ,
-            top: 595,
             backgroundColor: '#179250',
-            borderRadius: 77
+            borderRadius: 77,
         },
     
         iniciarInspecao: {
-            left: '28.8%',
-            right: '28.8%',
-            top: '30.33%',
-            bottom: '16.72%',
-    
             fontFamily: 'Montserrat_700Bold',
             color: '#FFFFFF',
+            textTransform: "uppercase",
             fontSize: 16,
-            lineHeight: 20,
-            textTransform: 'uppercase',
-            alignItems: 'center',
+            textAlign: 'center',
+            padding: 15,
         }
 });
 

@@ -6,87 +6,83 @@ const styles = StyleSheet.create({
 
     container: {
         backgroundColor: '#ffffff',
-        height: 900
+        flex: 1,
     },        
 
     header: {
         backgroundColor: '#179250',
-        flex: 0,
-        width: 415,
-        height: 260,
-        left: 0,
-        top: 0,
+        padding: 28,
         borderBottomLeftRadius: 40,
         borderBottomRightRadius: 40,
-        
+        marginBottom: 7
     },
 
-    h1: {
-        position: 'absolute',
-        left: 28,
-        top: 100,
-
-        fontFamily: 'Montserrat_700Bold',
-        fontSize: 20,
-        lineHeight: 24,
-        display: 'flex',
+    logoAndButton: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        color: '#FFFFFF'
-        
+        marginBottom: 20
     },
 
     logo: {
-        position:'absolute',
         width: 50,
         height: 50,
-        left: 24,
-        top: 28
     },
 
     voltarHome: {
         width: 18,
         height: 18,
-        left: 368,
-        top: 36
+    },
+
+    h1: {
+        fontFamily: 'Montserrat_700Bold',
+        fontSize: 20,
+        lineHeight: 24,
+        display: 'flex',
+        alignItems: 'center',
+        color: '#FFFFFF',
+        marginBottom: 20
+        
     },
 
     pesquisa: {
-        position: 'absolute',
-        width: 360,
-        height: 50,
-        padding: 15,
-        left: 28,
-        top: 180,
+        width: '100%',
         borderRadius: 10,
-        backgroundColor: '#FFFFFF'
+        paddingHorizontal: 20,
+        paddingVertical: 12,
+        backgroundColor: '#FFFFFF',
+        fontSize: 16,
+    },
+
+    
+
+    containerButtonAndList: {
+        padding: 28
     },
 
     buttons: {
         flexDirection: 'row',
-        marginTop: -20,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        paddingBottom: 35
     },
 
     button1: {
+        paddingTop: 38,
+        paddingBottom: 20,
         width: 170,
-        height: 109,
-        left: 28,
-        top: 50,
         justifyContent: 'space-between',
+        alignItems: 'center',
         
         backgroundColor: '#f3f5fa',
         borderRadius: 10
     },
 
     imagem1: {
-        left: 75,
-        top: 25
+        marginBottom: 28
     },
     
     textbutton1: {
         width: 115,
-        height: 50,
-        left: 20,
 
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 14,
@@ -99,12 +95,11 @@ const styles = StyleSheet.create({
     },
 
     button2: {
-        
+        paddingTop: 38,
+        paddingBottom: 20,
         width: 170,
-        height: 109,
-        left: -28,
-        top: 50,
         justifyContent: 'space-between',
+        alignItems: 'center',
         
         backgroundColor: '#f3f5fa',
         borderRadius: 10
@@ -112,14 +107,10 @@ const styles = StyleSheet.create({
     },
 
     imagem2: {
-        left: 74,
-        top: 25
     },
 
     textbutton2: {
         width: 115,
-        height: 50,
-        left: 24,
 
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 14,
@@ -133,11 +124,10 @@ const styles = StyleSheet.create({
     inspecoes32: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 85
+        paddingBottom: 12
     },
 
     texto1: {
-        left: 28,
 
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 14,
@@ -147,7 +137,6 @@ const styles = StyleSheet.create({
     },
 
     texto2: {
-        left: -28,
 
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 14,
@@ -158,138 +147,67 @@ const styles = StyleSheet.create({
 
     },
 
-    centroDeDistribuição: {
+    itemnInspect: {
+        flexDirection: 'row',
+        justifyContent: "space-between",
         backgroundColor: '#F3F5FA',
-        width: 355,
-        height: 60,
-        left: 28,
-        top: 10,
-        borderRadius: 10
+        borderRadius: 10,
+        alignItems: 'center',
+        marginBottom: 10
+    },
+    imageTitleAndDate: {
+        justifyContent: "flex-start",
+        flexDirection: 'row',
+        alignItems: 'center'
     },
 
-    text1: {
-        height: 17,
-        left: 70,
-        top: -50,
+    titleAndDate: {
+        paddingLeft: 12
+    },
 
+    titleInspect: {
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 14,
-        lineHeight: 17,
-        alignItems: 'center'
+        lineHeight: 17
     },
 
-    frigorificoSaoBento: {
-        backgroundColor: '#F3F5FA',
-        width: 355,
-        height: 60,
-        left: 28,
-        top: 30,
-        borderRadius: 10
-
+    data: {    
+    fontFamily: 'Montserrat_500Medium',
+    fontSize: 9,
+    lineHeight: 11,
+    color: '#7a7b7d'
     },
 
-    text2: {
-        height: 17,
-        left: 70,
-        top: -50,
-
-        fontFamily: 'Montserrat_600SemiBold',
-        fontSize: 14,
-        lineHeight: 17,
-        alignItems: 'center'
-
+    divisoriaTotalAndNumber: {
+        flexDirection: 'row'
     },
 
-    industriaGeral: {
-        backgroundColor: '#F3F5FA',
-        width: 355,
-        height: 60,
-        left: 28,
-        top: 50,
-        borderRadius: 10
+    divisoria: {
+        width: 1,
+        height: 20,
+        marginVertical: 20,
+        marginHorizontal: 16,
+        backgroundColor: '#abacaf'
     },
 
-    text3: {
-        height: 17,
-        left: 70,
-        top: -50,
-
-        fontFamily: 'Montserrat_600SemiBold',
-        fontSize: 14,
-        lineHeight: 17,
-        alignItems: 'center'
-
-    },
-
-    outros: {
-        backgroundColor: '#F3F5FA',
-        width: 355,
-        height: 60,
-        left: 28,
-        top: 70,
-        borderRadius: 10
-    },
-
-    text4: {
-        height: 17,
-        left: 70,
-        top: -50,
-
-        fontFamily: 'Montserrat_600SemiBold',
-        fontSize: 14,
-        lineHeight: 17,
-        alignItems: 'center'
-
-    },
-
-    data: {
-        color: '#7a7b7d',
-        left: 70,
-        bottom: 45,
-
-        fontFamily: 'Montserrat_500Medium',
-        fontStyle: 'normal',
-        fontWeight: "500",
-        fontSize: 9,
-        lineHeight: 11,
-        alignItems: 'center'
-        
-    },
-
-    divisor: {
-        borderBottomColor: '#abacaf',
-        borderBottomWidth: 1,
-        borderRadius: 1,
-        transform: [{rotate: '90deg'}],
-        width: 28,
-        height: 10,
-        left: 278,
-        bottom: 70
-
+    totalAndNumber: {
+        marginTop: 12,
+        marginRight: 30,
     },
 
     total: {
-        color: '#7a7b7d',
-        left: 300,
-        bottom: 95,
-
         fontFamily: 'Montserrat_600SemiBold',
-        fontStyle: 'normal',
-        fontWeight: "600",
         fontSize: 10,
         lineHeight: 12,
-        alignItems: 'center'
+        color: '#7a7b7d'
     },
 
-    totalnum: {
-        color: '#179250',
-        left: 300,
-        bottom: 95,
-        
+    totalNum: {
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 20,
-        alignItems: 'center'
-    },
+        lineHeight: 24,
+        color: '#179250'
+    }
 });
 
 export default styles;

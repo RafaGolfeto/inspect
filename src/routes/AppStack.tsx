@@ -7,7 +7,7 @@ import Home from '../pages/Home';
 import Quest from '../pages/Quest';
 import Inspencionar from '../pages/Inspencionar';
 import Inserir from '../pages/Inserir';
-
+import Importar from '../pages/Importar';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -20,6 +20,7 @@ function AppStack() {
                 <Screen name="Quest" component={Quest} />
                 <Screen name="Inspencionar" component={Inspencionar} />
                 <Screen name="Inserir" component={Inserir} />
+                <Screen name="Importar" component={Importar} />
             </Navigator>
         </NavigationContainer>
     );

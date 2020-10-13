@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, View } from 'react-native';
-import { RectButton, TouchableOpacity } from 'react-native-gesture-handler';
+import { RectButton, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation  } from '@react-navigation/native';
 
 
@@ -23,103 +23,80 @@ function Quest() {
     navigate('Inserir')
   }
 
-    return  <View style={styles.container}> 
+  function handleNavigateToImportarPage() {
+    navigate('Importar')
+  }
 
-            <View style={styles.header}>
+    return  (
 
-            <Image source={home} style={styles.logo}>
-            </Image>           
-            <Text style={styles.h1}>Questionários</Text>
+    <View style={styles.container}> 
 
-            <RectButton
-            onPress={handleNavigateToHomePage} 
-            style={styles.voltar}>
-            <Image source={voltar} >                
-            </Image>
-            </RectButton>  
+          <View style={styles.header}>
+            <View style={styles.botaoTextoLogo}>
+                  <RectButton 
+                    onPress={handleNavigateToHomePage}
+                    style={styles.voltar}
+                  >
+                    <Image source={voltar}></Image>
+                  </RectButton>
 
+                  <Text style={styles.h1}>Questionários</Text>          
+                  <Image source={home} style={styles.logo}></Image>         
             </View>
+          </View>
 
-            <View style={styles.textoCorpo}>
+          <View style={styles.textoCorpo}>
+            <Text style={styles.h2}>Gerencie os registros através das opções abaixo</Text>
+          </View>
 
-            <Text style={styles.h2}>Gerencie os registros através das opções</Text>
-            <Text style={styles.abaixo}> Abaixo</Text>
+        <ScrollView>
+            <View style={styles.containerButtonAndList}>
 
-            </View>
+              <View style={styles.buttons}>
 
-            <View style={styles.buttons}>
-            <RectButton
-            onPress={handleNavigateToInserirPage} 
-            style={styles.button1}>
-              <Image source={inserir} style={styles.imagem1}>
-              </Image>
-              <Text style={styles.textbutton1}>Inserir</Text>
-            </RectButton>
+                <RectButton 
+                  onPress={handleNavigateToInserirPage} 
+                  style={styles.button1} 
+                >
+                  <Image source={inserir} style={styles.imagem1}></Image>
+                  <Text style={styles.textbutton1}>Inserir</Text>
+                </RectButton>
 
-            <TouchableOpacity style={styles.button2}>
-              <Image source={importar} style={styles.imagem2}>
+                <RectButton
+                  onPress={handleNavigateToImportarPage} 
+                  style={styles.button2}
+                >          
+                <Image source={importar} style={styles.imagem2}></Image>
+                  <Text style={styles.textbutton2}>Importar</Text>
+                </RectButton>
+              </View>
 
-              </Image>
-              <Text style={styles.textbutton2}>Importar</Text>
-            </TouchableOpacity>
-        
-            </View>
-
-            <View style={styles.questionario32}>
+              <View style={styles.questionario32}>
                 <Text style={styles.texto1}>Questionários</Text>
                 <Text style={styles.texto2}>32</Text>
+              </View>
+
+              <View style={styles.itemnInspect}>
+
+                  <View style={styles.containerTitleAndDate}>
+                      <View style={styles.titleAndDate}>
+                            <Text style={styles.titleInspect}>Frigorífico</Text>
+                            <Text style={styles.data}>01/09/2020 às 15:45</Text>
+                      </View>
+                  </View>
+
+                  <View style={styles.divisoriaTotalAndNumber}>
+                        <View style={styles.divisoria} /> 
+                        <View style={styles.totalAndNumber}>         
+                            <Text style={styles.total}>Total</Text>                    
+                            <Text style={styles.totalNum}>45</Text>
+                        </View>   
+                    </View>
+              </View>          
             </View>
-
-
-            <View style={styles.frigorifico}>
-
-                <Text style={styles.text1}>Frigorífico</Text>
-                <Text style={styles.data}>01/09/2020 às 15:45</Text>
-
-            <View style={styles.divisor} />
-
-                <Text style={styles.total}>Total</Text>
-                <Text style={styles.totalnum}>45</Text>
-
-            </View>
-
-
-
-            <View style={styles.industria}>
-
-                <Text style={styles.text2}>Indústria</Text>
-                <Text style={styles.data}>01/09/2020 às 15:45</Text>
-
-            <View style={styles.divisor} />
-
-                <Text style={styles.total}>Total</Text>
-                <Text style={styles.totalnum}>45</Text>
-            </View>
-            
-            <View style={styles.areaAgricola}>
-            
-                <Text style={styles.text3}>Área agricola</Text>
-                <Text style={styles.data}>01/09/2020 às 15:45</Text>
-
-            <View style={styles.divisor} />
-
-                <Text style={styles.total}>Total</Text>
-                <Text style={styles.totalnum}>45</Text>
-            </View>
-
-            <View style={styles.campo}>
-            
-                <Text style={styles.text4}>Campo</Text>
-                <Text style={styles.data}>01/09/2020 às 15:45</Text>
-
-            <View style={styles.divisor} />
-
-                <Text style={styles.total}>Total</Text>
-                <Text style={styles.totalnum}>45</Text>
-            </View>
-            
-    
-            </View>
+        </ScrollView>
+    </View>
+  )  
 
 }
 
