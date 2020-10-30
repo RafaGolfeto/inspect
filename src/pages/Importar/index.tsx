@@ -4,8 +4,15 @@ import { RectButton, TextInput } from 'react-native-gesture-handler';
 import styles from './styles';
 
 import fechar from '../../assets/images/icons/fechar.png'
+import { useNavigation } from '@react-navigation/native';
 
 function Importar() {
+
+    const {navigate} = useNavigation();
+
+    function handleNavigateToListaImportar() {
+        navigate('ListaImportar')
+    }
     return (
 
         <View style={styles.container1}>
@@ -45,6 +52,7 @@ function Importar() {
                     </KeyboardAvoidingView>
     
                     <RectButton 
+                        onPress={handleNavigateToListaImportar}
                         style={styles.button}
                     >
                         <Text style={styles.salvar}>Salvar</Text>

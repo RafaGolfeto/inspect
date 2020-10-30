@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Text, View } from 'react-native';
 import { RectButton, TextInput } from 'react-native-gesture-handler';
-import { useNavigation  } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import home from '../../assets/images/logoHome.png'
 import voltar from '../../assets/images/icons/voltar.png'
@@ -9,61 +9,66 @@ import voltar from '../../assets/images/icons/voltar.png'
 import styles from './styles';
 
 function Inspencionar() {
+    const { navigate } = useNavigation();
 
-    
-const {navigate} = useNavigation();
+    function handleNavigateToHomePage() {
+        navigate('Home')
+    }
 
-function handleNavigateToHomePage() {
-    navigate('Home')
-  }
-    return  <View style={styles.container}>
-                <View style={styles.header}>
-                    <View style={styles.botaoTextoLogo}>
-                        <RectButton 
-                            onPress={handleNavigateToHomePage}
-                            style={styles.voltar}
-                        >
-                            <Image source={voltar}></Image>
-                        </RectButton>
+    function handleNavigateToIniciarInspecao() {
+        navigate('IniciarInspencao')
+    }
 
-                        <Text style={styles.h1}>Inspecionar</Text>          
-                        <Image source={home} style={styles.logo}></Image>                           
-                    </View>
-                </View>
 
-                <View style={styles.inputAndButton}>
-                    <TextInput 
-                        style={styles.nomeDaEmpresa} placeholder="Nome da empresa" >
-                    </TextInput>
+    return <View style={styles.container}>
+        <View style={styles.header}>
+            <View style={styles.botaoTextoLogo}>
+                <RectButton
+                    onPress={handleNavigateToHomePage}
+                    style={styles.voltar}
+                >
+                    <Image source={voltar}></Image>
+                </RectButton>
 
-                    <TextInput 
-                        style={styles.selecionarUmQuestionário} placeholder="Selecionar um questionário" >
-                    </TextInput>
-
-                    <TextInput 
-                        style={styles.informeALocalização} placeholder="Informe a localização" >
-                    </TextInput>
-
-                    <TextInput 
-                        style={styles.dataDaInspeção} placeholder="Data da inspeção" >
-                    </TextInput>
-
-                    <TextInput 
-                        style={styles.fotoDoLocal} placeholder="Foto do local" >
-                    </TextInput>
-
-                    <TextInput 
-                        style={styles.informeUmaObservação} placeholder="Informe uma observação" >
-                    </TextInput>
-
-                    <RectButton 
-                        style={styles.button}
-                    >
-                        <Text style={styles.iniciarInspecao}>INICIAR inspeção</Text>
-
-                    </RectButton>
-                </View>
+                <Text style={styles.h1}>Inspecionar</Text>
+                <Image source={home} style={styles.logo}></Image>
             </View>
+        </View>
+
+        <View style={styles.inputAndButton}>
+            <TextInput
+                style={styles.nomeDaEmpresa} placeholder="Nome da empresa" >
+            </TextInput>
+
+            <TextInput
+                style={styles.selecionarUmQuestionário} placeholder="Selecionar um questionário" >
+            </TextInput>
+
+            <TextInput
+                style={styles.informeALocalização} placeholder="Informe a localização" >
+            </TextInput>
+
+            <TextInput
+                style={styles.dataDaInspeção} placeholder="Data da inspeção" >
+            </TextInput>
+
+            <TextInput
+                style={styles.fotoDoLocal} placeholder="Foto do local" >
+            </TextInput>
+
+            <TextInput
+                style={styles.informeUmaObservação} placeholder="Informe uma observação" >
+            </TextInput>
+
+            <RectButton
+                onPress={handleNavigateToIniciarInspecao}
+                style={styles.button}
+            >
+                <Text style={styles.iniciarInspecao}>INICIAR inspeção</Text>
+
+            </RectButton>
+        </View>
+    </View>
 }
 
 export default Inspencionar; 

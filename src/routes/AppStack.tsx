@@ -8,6 +8,13 @@ import Quest from '../pages/Quest';
 import Inspencionar from '../pages/Inspencionar';
 import Inserir from '../pages/Inserir';
 import Importar from '../pages/Importar';
+import ListaImportar from '../pages/ListaImportar';
+import AlterarQuestionario from '../pages/AlterarQuestionario';
+import ListaInserir from '../pages/ListaInserir';
+import ItemInserido from '../pages/ItemInserido';
+import IniciarInspencao from '../pages/IniciarInspencao';
+import InspecaoFinalizada from '../pages/InspecaoFinalizada';
+
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -21,6 +28,12 @@ function AppStack() {
                 <Screen name="Inspencionar" component={Inspencionar} />
                 <Screen name="Inserir" component={Inserir} />
                 <Screen name="Importar" component={Importar} />
+                <Screen name="ListaImportar" component={ListaImportar} />
+                <Screen name="AlterarQuestionario" component={AlterarQuestionario} />
+                <Screen name="ListaInserir" component={ListaInserir} />
+                <Screen name="ItemInserido" component={ItemInserido} />
+                <Screen name="IniciarInspencao" component={IniciarInspencao} />
+                <Screen name="InspecaoFinalizada" component={InspecaoFinalizada} />
             </Navigator>
         </NavigationContainer>
     );
