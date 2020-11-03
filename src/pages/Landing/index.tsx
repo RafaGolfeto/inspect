@@ -16,14 +16,14 @@ function Landing() {
 
     return (
 
-        
+
         <View style={styles.container}>
 
-            <ImageBackground 
+            <ImageBackground
                 source={require('../../assets/images/landingFundo.png')}
                 style={styles.container}
-                imageStyle={{width: '100%', height: 308.64, left: 0, top: 0}}
-            >  
+                imageStyle={{ width: '100%', height: 308.64, left: 0, top: 0 }}
+            >
 
 
                 <View style={styles.container2}>
@@ -31,7 +31,7 @@ function Landing() {
                     <View style={styles.containertopo}>
                         <View style={styles.logo}>
                             <Image source={landingImg} />
-                        </View> 
+                        </View>
                     </View>
 
 
@@ -44,7 +44,7 @@ function Landing() {
                             <TextInput style={styles.input} placeholder="Senha" />
                         </KeyboardAvoidingView>
 
-                        <RectButton  style={styles.button} onPress={handleNavigateToHomePage}>
+                        <RectButton style={styles.button} onPress={handleNavigateToHomePage}>
                             <Text style={styles.login}>LOGIN</Text>
                         </RectButton>
                     </View>
@@ -53,9 +53,9 @@ function Landing() {
                 </View>
 
             </ImageBackground>
-            
+
         </View>
-        
+
     );
 }
 

@@ -10,8 +10,8 @@ function Inserir() {
    
         const {navigate} = useNavigation();
 
-        function handleNavigateToListaInserir() {
-            navigate('ListaInserir')
+        function handleNavigateToListaImportar() {
+            navigate('ListaImportar')
         }
     
     return (
@@ -36,7 +36,7 @@ function Inserir() {
                 </KeyboardAvoidingView>
 
                 <RectButton 
-                    onPress={handleNavigateToListaInserir}
+                    onPress={handleNavigateToListaImportar}
                     style={styles.button}
                 >
                     <Text style={styles.salvar}>Salvar</Text>
