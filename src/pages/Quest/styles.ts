@@ -53,16 +53,17 @@ const styles = StyleSheet.create({
     buttons: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingBottom: 35
+        paddingBottom: 35,
+        alignContent: 'stretch'
     },
 
     button1: {
         paddingTop: 38,
         paddingBottom: 20,
-        width: 170,
+        marginRight: 10,
         justifyContent: 'space-between',
         alignItems: 'center',
-        
+        flex: 1,        
         backgroundColor: '#f3f5fa',
         borderRadius: 10        
     },
@@ -85,11 +86,11 @@ const styles = StyleSheet.create({
 
     button2: {
         paddingTop: 38,
+        marginLeft: 10,
         paddingBottom: 20,
-        width: 170,
         justifyContent: 'space-between',
         alignItems: 'center',
-        
+        flex: 1,
         backgroundColor: '#f3f5fa',
         borderRadius: 10
     },

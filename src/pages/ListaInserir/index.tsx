@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '.styles';
+import styles from './styles';
 
 import { useNavigation } from '@react-navigation/native';
 import { Text, View } from 'react-native';

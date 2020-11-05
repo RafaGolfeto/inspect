@@ -85,7 +85,10 @@ const styles = StyleSheet.create({
     botaoIrregular: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 30
+        padding: 31,        
+        marginRight: 5,
+        alignItems: 'center',
+        flex: 1,        
     },
 
     textoIrregular: {
@@ -95,7 +98,10 @@ const styles = StyleSheet.create({
     botaoAnalisar: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 30
+        padding: 31,        
+        marginLeft: 5,
+        alignItems: 'center',
+        flex: 1,        
     },
 
     textoAnalisar: {
@@ -105,7 +111,10 @@ const styles = StyleSheet.create({
     botaoRegular: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 30
+        padding: 31,        
+        marginLeft: 10,
+        alignItems: 'center',
+        flex: 1,        
     },
 
     textoRegular: {
@@ -121,7 +130,10 @@ const styles = StyleSheet.create({
     botaoImagem: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15
+        padding: 15,        
+        marginRight: 5,
+        alignItems: 'center',
+        flex: 1,        
     },
 
     textoImagem: {
@@ -131,7 +143,10 @@ const styles = StyleSheet.create({
     botaoVideo: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15
+        padding: 15,        
+        marginRight: 5,
+        alignItems: 'center',
+        flex: 1,  
 
     },
 
@@ -142,7 +157,10 @@ const styles = StyleSheet.create({
     botaoArquivo: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15
+        padding: 15,        
+        marginRight: 5,
+        alignItems: 'center',
+        flex: 1,  
 
     },
 
@@ -153,7 +171,10 @@ const styles = StyleSheet.create({
     botaoAnotacao: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15
+        padding: 15,        
+        marginRight: 5,
+        alignItems: 'center',
+        flex: 1,  
 
     },
 

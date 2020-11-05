@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Landing from '../pages/Landing';
 import Home from '../pages/Home';
 import Quest from '../pages/Quest';
-import Inspencionar from '../pages/Inspencionar';
+import Inspecionar from '../pages/Inspecionar';
 import Inserir from '../pages/Inserir';
 import Importar from '../pages/Importar';
 import ListaImportar from '../pages/ListaImportar';
@@ -25,7 +25,7 @@ function AppStack() {
                 <Screen name="Landing" component={Landing} />
                 <Screen name="Home" component={Home} />
                 <Screen name="Quest" component={Quest} />
-                <Screen name="Inspencionar" component={Inspencionar} />
+                <Screen name="Inspecionar" component={Inspecionar} />
                 <Screen name="Inserir" component={Inserir} />
                 <Screen name="Importar" component={Importar} />
                 <Screen name="ListaImportar" component={ListaImportar} />

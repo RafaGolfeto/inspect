@@ -6,7 +6,7 @@ import { Image, Text, View } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 
 import home from '../../assets/images/logoHome.png'
-import voltar from '../../assets/images/icons/voltar.png'
+import voltar from '../../assets/images/icons/botaoVoltar.png'
 
 function IniciarInspencao() {
     const { navigate } = useNavigation();

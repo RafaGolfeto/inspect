@@ -4,11 +4,11 @@ import { RectButton, ScrollView, TextInput } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native';
 
 import home from '../../assets/images/logoHome.png'
-import voltar from '../../assets/images/icons/voltar.png'
+import voltar from '../../assets/images/icons/botaoVoltar.png'
 
 import styles from './styles';
 
-function Inspencionar() {
+function Inspecionar() {
     const { navigate } = useNavigation();
 
     function handleNavigateToHomePage() {
@@ -78,4 +78,4 @@ function Inspencionar() {
     );
 }
 
-export default Inspencionar; 
+export default Inspecionar; 

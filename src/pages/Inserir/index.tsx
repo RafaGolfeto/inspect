@@ -3,7 +3,7 @@ import { Image, KeyboardAvoidingView, Text, View } from 'react-native';
 import { RectButton, TextInput } from 'react-native-gesture-handler';
 import styles from './styles';
 
-import fechar from '../../assets/images/icons/fechar.png'
+import fechar from '../../assets/images/icons/botaoFechar.png'
 import { useNavigation } from '@react-navigation/native';
 
 function Inserir() {

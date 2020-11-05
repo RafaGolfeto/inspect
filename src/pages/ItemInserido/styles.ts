@@ -40,13 +40,10 @@ const styles = StyleSheet.create({
         padding: 28
     },
 
-    bordarTextoCorpo: {
-        flexDirection: 'row',
-        justifyContent: "space-between",
+    bordaTextoCorpo: {
         borderRadius: 10,
-        alignItems: 'center',
-        borderWidth:1,
-        borderColor:'#BEBEBE',
+        borderWidth: 1,
+        borderColor: '#BEBEBE',
         padding: 15,
         marginBottom: 15
     },
@@ -55,7 +52,11 @@ const styles = StyleSheet.create({
         fontFamily: 'Montserrat_500Medium',
         fontSize: 16,
         lineHeight: 19,
-        color: '#737373'
+        color: '#737373',
+        paddingBottom: 400,
+        borderColor: '#b3b3b3',
+        backgroundColor: '#FFFFFF',
+        borderRadius: 10,
     },
 
     containerButton: {

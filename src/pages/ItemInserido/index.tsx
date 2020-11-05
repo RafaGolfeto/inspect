@@ -4,10 +4,10 @@ import styles from './styles';
 
 import { useNavigation } from '@react-navigation/native';
 import { Image, Text, View } from 'react-native';
-import { RectButton } from 'react-native-gesture-handler';
+import { RectButton, TextInput } from 'react-native-gesture-handler';
 
 import home from '../../assets/images/logoHome.png';
-import voltar from '../../assets/images/icons/voltar.png';
+import voltar from '../../assets/images/icons/botaoVoltar.png';
 
 function ItemInserido() {
     const { navigate } = useNavigation();
@@ -34,8 +34,8 @@ function ItemInserido() {
 
             <View style={styles.containertextoCorpoAndButton}>
 
-                <View style={styles.bordarTextoCorpo}>
-                    <Text style={styles.textoCorpo}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis justo a pellentesque facilisis. Sed porta at arcu vitae rutrum. Nulla fermentum nisl vel nunc posuere laoreet. Sed vel tempus purus.</Text>
+                <View style={styles.bordaTextoCorpo}>
+                    <TextInput style={styles.textoCorpo} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis justo a pellentesque facilisis. Sed porta at arcu vitae rutrum. Nulla fermentum nisl vel nunc posuere laoreet. Sed vel tempus purus." />
                 </View>
 
                 <View style={styles.containerButton}>

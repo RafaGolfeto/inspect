@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 
 import home from '../../assets/images/logoHome.png';
-import voltar from '../../assets/images/icons/voltar.png';
+import voltar from '../../assets/images/icons/botaoVoltar.png';
 import inserir from '../../assets/images/icons/inserir.png';
 import importar from '../../assets/images/icons/importar.png';
 
@@ -54,21 +54,16 @@ function Quest() {
 
           <View style={styles.buttons}>
 
-            <RectButton
-              onPress={handleNavigateToInserirPage}
-              style={styles.button1}
-            >
+            <RectButton onPress={handleNavigateToInserirPage} style={styles.button1} >
               <Image source={inserir} style={styles.imagem1}></Image>
               <Text style={styles.textbutton1}>Inserir</Text>
             </RectButton>
 
-            <RectButton
-              onPress={handleNavigateToImportarPage}
-              style={styles.button2}
-            >
+            <RectButton onPress={handleNavigateToImportarPage} style={styles.button2} >
               <Image source={importar} style={styles.imagem2}></Image>
               <Text style={styles.textbutton2}>Importar</Text>
             </RectButton>
+            
           </View>
 
           <View style={styles.questionario32}>

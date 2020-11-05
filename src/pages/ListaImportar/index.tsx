@@ -5,9 +5,10 @@ import styles from './styles';
 
 
 import home from '../../assets/images/logoHome.png';
+import voltar from '../../assets/images/icons/botaoVoltar.png';
 import editar from '../../assets/images/icons/editar.png';
 import excluir from '../../assets/images/icons/excluir.png';
-import voltar from '../../assets/images/icons/voltar.png';
+
 
 import { useNavigation } from '@react-navigation/native';
 
