@@ -10,8 +10,12 @@ function Inserir() {
    
         const {navigate} = useNavigation();
 
-        function handleNavigateToListaImportar() {
-            navigate('ListaImportar')
+        function handleNavigateAlterarQuestionario() {
+            navigate('AlterarQuestionario')
+        }
+
+        function handleNavigateQuestionario() {
+            navigate('Questionario')
         }
     
     return (
@@ -22,6 +26,7 @@ function Inserir() {
                 <View style={styles.textoEBotao}>
                     <Text style={styles.h1}>Inserir</Text>
                         <RectButton
+                            onPress={handleNavigateAlterarQuestionario}
                             style={styles.fechar}>
                             <Image source={fechar}></Image>
                         </RectButton>
@@ -36,7 +41,7 @@ function Inserir() {
                 </KeyboardAvoidingView>
 
                 <RectButton 
-                    onPress={handleNavigateToListaImportar}
+                    onPress={handleNavigateQuestionario}
                     style={styles.button}
                 >
                     <Text style={styles.salvar}>Salvar</Text>

@@ -11,8 +11,12 @@ function Importar() {
 
     const { navigate } = useNavigation();
 
-    function handleNavigateToListaImportar() {
-        navigate('ListaImportar')
+    function handleNavigateToChecklist() {
+        navigate('Checklist')
+    }
+
+    function handleNavigateToQuestionario() {
+        navigate('Questionario')
     }
     return (
 
@@ -22,6 +26,7 @@ function Importar() {
                 <View style={styles.textoEBotao}>
                     <Text style={styles.h1}>Importar</Text>
                     <RectButton
+                        onPress={handleNavigateToChecklist}
                         style={styles.fechar}>
                         <Image source={fechar}></Image>
                     </RectButton>
@@ -53,7 +58,7 @@ function Importar() {
                 </KeyboardAvoidingView>
 
                 <RectButton
-                    onPress={handleNavigateToListaImportar}
+                    onPress={handleNavigateToQuestionario}
                     style={styles.button}
                 >
                     <Text style={styles.salvar}>Salvar</Text>

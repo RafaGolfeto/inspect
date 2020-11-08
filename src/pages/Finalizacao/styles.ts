@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     },
 
     containertopo: {
+        paddingHorizontal: 15,
         marginTop: 80,
         alignItems: "center"
     },
@@ -25,11 +26,16 @@ const styles = StyleSheet.create({
 
     textoInspecaoFinalizada: {
         fontFamily: 'Montserrat_700Bold',
-        fontSize: 25,
+        fontSize: 23,
         lineHeight: 28,
-        alignItems: "center",
-        textAlign: "center"
 
+    },
+
+    sucesso: {        
+        fontFamily: 'Montserrat_700Bold',
+        fontSize: 23,
+        lineHeight: 28,
+        color: '#179250'
     },
 
     containerBotao: {
@@ -49,7 +55,7 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         color: '#ffffff',
         textAlign: "center"
-    }
+    },
 
 });
 

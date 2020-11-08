@@ -14,19 +14,19 @@ import inspecionar from '../../assets/images/icons/inspecionar.png';
 import quest from '../../assets/images/quest.png';
 
 
-function Home() {
+function Inicio() {
     const { navigate } = useNavigation();
 
-    function handleNavigateToQuestPage() {
-        navigate('Quest')
+    function handleNavigateToChecklist() {
+        navigate('Checklist')
     }
 
     function handleNavigateToInspecionarPage() {
         navigate('Inspecionar')
     }
 
-    function handleNavigateToLandingPage() {
-        navigate('Landing')
+    function handleNavigateToLoginPage() {
+        navigate('Login')
     }
 
 
@@ -39,7 +39,7 @@ function Home() {
                     <Image source={home} style={styles.logo}></Image>
 
                     <RectButton
-                        onPress={handleNavigateToLandingPage}
+                        onPress={handleNavigateToLoginPage}
                         style={styles.voltarHome}>
                         <Image source={botaoVoltarHome} ></Image>
 
@@ -65,7 +65,7 @@ function Home() {
                     <View style={styles.buttons}>
 
                         <RectButton
-                            onPress={handleNavigateToQuestPage}
+                            onPress={handleNavigateToChecklist}
                             style={styles.button1}
                         >
                             <Image source={questionario} style={styles.imagem1}></Image>
@@ -112,4 +112,4 @@ function Home() {
     )
 }
 
-export default Home; 
+export default Inicio; 

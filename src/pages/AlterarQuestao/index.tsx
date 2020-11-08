@@ -9,11 +9,11 @@ import { RectButton, TextInput } from 'react-native-gesture-handler';
 import home from '../../assets/images/logoHome.png';
 import voltar from '../../assets/images/icons/botaoVoltar.png';
 
-function ItemInserido() {
+function AlterarQuestao() {
     const { navigate } = useNavigation();
 
-    function handleNavigateToListaImportar() {
-        navigate('ListaImportar')
+    function handleNavigateToQuestionario() {
+        navigate('Questionario')
     }
     return (
         <View style={styles.container1}>
@@ -21,7 +21,7 @@ function ItemInserido() {
             <View style={styles.header}>
                 <View style={styles.botaoTextoLogo}>
                     <RectButton
-                        onPress={handleNavigateToListaImportar}
+                        onPress={handleNavigateToQuestionario}
                         style={styles.voltar}
                     >
                         <Image source={voltar}></Image>
@@ -40,7 +40,7 @@ function ItemInserido() {
 
                 <View style={styles.containerButton}>
                     <RectButton
-                        onPress={handleNavigateToListaImportar}
+                        onPress={handleNavigateToQuestionario}
                         style={styles.button}
                     >
                         <Text style={styles.salvar}>Salvar</Text>
@@ -52,4 +52,4 @@ function ItemInserido() {
     );
 }
 
-export default ItemInserido;
+export default AlterarQuestao;

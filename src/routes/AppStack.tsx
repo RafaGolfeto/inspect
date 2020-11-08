@@ -2,18 +2,16 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Landing from '../pages/Landing';
-import Home from '../pages/Home';
-import Quest from '../pages/Quest';
+import Login from '../pages/Login';
+import Inicio from '../pages/Inicio';
+import Checklist from '../pages/Checklist';
 import Inspecionar from '../pages/Inspecionar';
-import Inserir from '../pages/Inserir';
+import ImportarInserir from '../pages/ImportarInserir';
+import Questionario from '../pages/Questionario';
+import AlterarQuestao from '../pages/AlterarQuestao';
 import Importar from '../pages/Importar';
-import ListaImportar from '../pages/ListaImportar';
-import AlterarQuestionario from '../pages/AlterarQuestionario';
-import ListaInserir from '../pages/ListaInserir';
-import ItemInserido from '../pages/ItemInserido';
-import IniciarInspencao from '../pages/IniciarInspencao';
-import InspecaoFinalizada from '../pages/InspecaoFinalizada';
+import Questao from '../pages/Questao';
+import Finalizacao from '../pages/Finalizacao';
 
 
 const { Navigator, Screen } = createStackNavigator();
@@ -22,18 +20,16 @@ function AppStack() {
     return (
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false }}>
-                <Screen name="Landing" component={Landing} />
-                <Screen name="Home" component={Home} />
-                <Screen name="Quest" component={Quest} />
-                <Screen name="Inspecionar" component={Inspecionar} />
-                <Screen name="Inserir" component={Inserir} />
-                <Screen name="Importar" component={Importar} />
-                <Screen name="ListaImportar" component={ListaImportar} />
-                <Screen name="AlterarQuestionario" component={AlterarQuestionario} />
-                <Screen name="ListaInserir" component={ListaInserir} />
-                <Screen name="ItemInserido" component={ItemInserido} />
-                <Screen name="IniciarInspencao" component={IniciarInspencao} />
-                <Screen name="InspecaoFinalizada" component={InspecaoFinalizada} />
+                <Screen name="Login" component={Login} /> 
+                <Screen name="Inicio" component={Inicio} /> 
+                <Screen name="Checklist" component={Checklist} /> 
+                <Screen name="Inspecionar" component={Inspecionar} /> 
+                <Screen name="ImportarInserir" component={ImportarInserir} /> 
+                <Screen name="Questionario" component={Questionario} />
+                <Screen name="AlterarQuestao" component={AlterarQuestao} /> 
+                <Screen name="Importar" component={Importar} /> 
+                <Screen name="Questao" component={Questao} /> 
+                <Screen name="Finalizacao" component={Finalizacao} /> 
             </Navigator>
         </NavigationContainer>
     );

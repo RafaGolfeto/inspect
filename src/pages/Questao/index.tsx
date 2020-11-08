@@ -7,6 +7,14 @@ import { RectButton } from 'react-native-gesture-handler';
 
 import home from '../../assets/images/logoHome.png'
 import voltar from '../../assets/images/icons/botaoVoltar.png'
+import irregular from '../../assets/images/icons/irregular.png'
+import analisar from '../../assets/images/icons/analisar.png'
+import regular from '../../assets/images/icons/regular.png'
+import adicionarImagem from '../../assets/images/icons/adicionarImagem.png'
+import adicionarVideo from '../../assets/images/icons/adicionarVideo.png'
+import adicionarArquivo from '../../assets/images/icons/adicionarArquivo.png'
+import adicionarAnotacao from '../../assets/images/icons/adicionarAnotacao.png'
+
 
 function IniciarInspencao() {
     const { navigate } = useNavigation();
@@ -15,8 +23,8 @@ function IniciarInspencao() {
         navigate('Inspecionar')
     }
 
-    function handleNavigateInspecaoFinalizada() {
-        navigate('InspecaoFinalizada')
+    function handleNavigateFinalizacao() {
+        navigate('Finalizacao')
     }
     return (
 
@@ -49,14 +57,17 @@ function IniciarInspencao() {
 
                     <View style={styles.botaoIrregularAnalisarERegular}>
                         <RectButton style={styles.botaoIrregular}>
+                            <Image source={irregular} style={styles.imagemButtonIrregularAnalisarERegular} />
                             <Text style={styles.textoIrregular}>Irregular</Text>
                         </RectButton>
 
                         <RectButton style={styles.botaoAnalisar}>
+                            <Image source={analisar} style={styles.imagemButtonIrregularAnalisarERegular} />
                             <Text style={styles.textoAnalisar}>Analisar</Text>
                         </RectButton>
 
                         <RectButton style={styles.botaoRegular}>
+                            <Image source={regular} style={styles.imagemButtonIrregularAnalisarERegular} />
                             <Text style={styles.textoRegular}>Regular</Text>
                         </RectButton>
                     </View>
@@ -64,25 +75,29 @@ function IniciarInspencao() {
                     <View style={styles.botaoImagemVideoArquivoAnotacao}>
 
                         <RectButton style={styles.botaoImagem}>
+                            <Image source={adicionarImagem} style={styles.imagemButtonImagemVideoArquivoAnotacao} />
                             <Text style={styles.textoImagem}>Imagem</Text>
                         </RectButton>
 
                         <RectButton style={styles.botaoVideo}>
+                            <Image source={adicionarVideo} style={styles.imagemButtonImagemVideoArquivoAnotacao} />
                             <Text style={styles.textoVideo}>Vídeo</Text>
                         </RectButton>
 
                         <RectButton style={styles.botaoArquivo}>
+                            <Image source={adicionarArquivo} style={styles.imagemButtonImagemVideoArquivoAnotacao} />
                             <Text style={styles.textoArquivo}>Arquivo</Text>
                         </RectButton>
 
                         <RectButton style={styles.botaoAnotacao}>
+                            <Image source={adicionarAnotacao} style={styles.imagemButtonImagemVideoArquivoAnotacao} />
                             <Text style={styles.textoAnotacao}>Anotação</Text>
                         </RectButton>
                     </View>
 
                     <View style={styles.botaoProximoVoltar}>
                         <RectButton style={styles.botaoProximo}
-                            onPress={handleNavigateInspecaoFinalizada}
+                            onPress={handleNavigateFinalizacao}
                         >
                             <Text style={styles.textoProxino}>Próximo</Text>
                         </RectButton>

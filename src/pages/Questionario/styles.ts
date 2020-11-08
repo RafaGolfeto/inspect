@@ -80,8 +80,7 @@ const styles = StyleSheet.create({
     excluir: {
 
     },
-
-
+    
     containerButtonAndRegistro: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -90,6 +89,9 @@ const styles = StyleSheet.create({
     },
 
     button: {
+        alignItems: "center",        
+        flexDirection: 'row',
+        justifyContent: 'center',
         backgroundColor: '#179250',
         width: 137,
         height: 35,
@@ -112,31 +114,6 @@ const styles = StyleSheet.create({
         lineHeight: 17,
         color: '#c5c5c5'
     },
-
-    containerTextoDivisoriaIcons: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: "center",
-        backgroundColor: '#F3F5FA',
-        borderRadius: 10,
-        paddingHorizontal: 15,
-        paddingVertical: 5,
-        marginTop: 15
-    },
-
-    containerTexto: {
-        justifyContent: "flex-start",
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    textoCorpo: {
-        fontFamily: 'Montserrat_300Light',
-        fontSize: 12,
-        lineHeight: 14
-        
-    }
-
 });
 
 export default styles;

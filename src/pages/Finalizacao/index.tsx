@@ -11,8 +11,8 @@ import inspencaoFinalizada from '../../assets/images/inspecaoFinalizada.png';
 function InspecaoFinalizada() {
     const { navigate } = useNavigation();
 
-    function handleNavigateHomePage() {
-        navigate('Home');
+    function handleNavigateInicio() {
+        navigate('Inicio');
     }
 
     return (
@@ -33,11 +33,11 @@ function InspecaoFinalizada() {
                             <Image source={inspencaoFinalizada} />
                         </View>
 
-                        <Text style={styles.textoInspecaoFinalizada}>Inspeção Finalizada com Sucesso</Text>
+                        <Text style={styles.textoInspecaoFinalizada}>Inspeção finalizada com </Text><Text style={styles.sucesso}>Sucesso</Text>
                     </View>
                     <View style={styles.containerBotao}>
                         <RectButton style={styles.botaoTelaInicial}
-                            onPress={handleNavigateHomePage}
+                            onPress={handleNavigateInicio}
                         >
                             <Text style={styles.textoTelaInicial}>TELA INICIAL</Text>
                         </RectButton>

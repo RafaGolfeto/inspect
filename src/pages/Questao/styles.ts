@@ -83,42 +83,58 @@ const styles = StyleSheet.create({
     },
 
     botaoIrregular: {
+        justifyContent: 'space-around',
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 31,        
-        marginRight: 5,
+        paddingHorizontal: 5,
+        paddingVertical: 30,
+        marginRight: 10,
         alignItems: 'center',
         flex: 1,        
+    },
+
+    imagemButtonIrregularAnalisarERegular: {
+        marginBottom: 25
     },
 
     textoIrregular: {
-
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 14,
+        lineHeight: 17,
     },
 
     botaoAnalisar: {
+        justifyContent: 'space-around',
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 31,        
-        marginLeft: 5,
+        paddingHorizontal: 5,
+        paddingVertical: 30,
         alignItems: 'center',
         flex: 1,        
+        marginLeft: 10,
     },
 
     textoAnalisar: {
-
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 14,
+        lineHeight: 17
     },
 
     botaoRegular: {
+        justifyContent: 'space-around',
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 31,        
-        marginLeft: 10,
+        paddingHorizontal: 5,
+        paddingVertical: 30,
+        marginLeft: 15,
         alignItems: 'center',
         flex: 1,        
     },
 
     textoRegular: {
-
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 14,
+        lineHeight: 17
     },
 
     botaoImagemVideoArquivoAnotacao: {
@@ -127,59 +143,71 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
 
+    imagemButtonImagemVideoArquivoAnotacao: {
+        marginBottom: 10
+    },
+
     botaoImagem: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15,        
-        marginRight: 5,
+        paddingVertical: 20,      
+        marginRight: 15,
         alignItems: 'center',
         flex: 1,        
     },
 
-    textoImagem: {
-
+    textoImagem: {        
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 10,
+        lineHeight: 12
     },
 
     botaoVideo: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15,        
-        marginRight: 5,
+        paddingVertical: 20,      
+        marginRight: 15,
         alignItems: 'center',
         flex: 1,  
 
     },
 
-    textoVideo: {
-
+    textoVideo: {   
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 10,
+        lineHeight: 12
     },
 
     botaoArquivo: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15,        
-        marginRight: 5,
+        paddingVertical: 20,      
+        marginRight: 15,
         alignItems: 'center',
         flex: 1,  
 
     },
 
-    textoArquivo: {
-
+    textoArquivo: {   
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 10,
+        lineHeight: 12
     },
 
     botaoAnotacao: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        padding: 15,        
-        marginRight: 5,
+        paddingVertical: 20,      
+        marginRight: 10,
         alignItems: 'center',
         flex: 1,  
 
     },
 
-    textoAnotacao: {
-
+    textoAnotacao: {   
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 10,
+        lineHeight: 12
     },
 
     botaoProximoVoltar: {
@@ -187,8 +215,8 @@ const styles = StyleSheet.create({
     },
 
     botaoProximo: {
-        width: 360,
-        padding: 10,
+        paddingHorizontal: 138,
+        paddingVertical: 15,
         marginBottom: 15,
         backgroundColor: '#179250',
         borderRadius: 77,

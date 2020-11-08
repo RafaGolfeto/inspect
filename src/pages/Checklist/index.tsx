@@ -12,15 +12,15 @@ import inserir from '../../assets/images/icons/inserir.png';
 import importar from '../../assets/images/icons/importar.png';
 
 
-function Quest() {
+function Checklist() {
   const { navigate } = useNavigation();
 
-  function handleNavigateToHomePage() {
-    navigate('Home')
+  function handleNavigateToInicioPage() {
+    navigate('Inicio')
   }
 
-  function handleNavigateToInserirPage() {
-    navigate('Inserir')
+  function handleNavigateToImportarInserir() {
+    navigate('ImportarInserir')
   }
 
   function handleNavigateToImportarPage() {
@@ -34,7 +34,7 @@ function Quest() {
       <View style={styles.header}>
         <View style={styles.botaoTextoLogo}>
           <RectButton
-            onPress={handleNavigateToHomePage}
+            onPress={handleNavigateToInicioPage}
             style={styles.voltar}
           >
             <Image source={voltar}></Image>
@@ -54,7 +54,7 @@ function Quest() {
 
           <View style={styles.buttons}>
 
-            <RectButton onPress={handleNavigateToInserirPage} style={styles.button1} >
+            <RectButton onPress={handleNavigateToImportarInserir} style={styles.button1} >
               <Image source={inserir} style={styles.imagem1}></Image>
               <Text style={styles.textbutton1}>Inserir</Text>
             </RectButton>
@@ -95,4 +95,4 @@ function Quest() {
 
 }
 
-export default Quest; 
+export default Checklist; 

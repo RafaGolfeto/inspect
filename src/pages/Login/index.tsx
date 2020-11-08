@@ -10,8 +10,8 @@ import landingImg from '../../assets/images/landing.png';
 function Landing() {
     const { navigate } = useNavigation();
 
-    function handleNavigateToHomePage() {
-        navigate('Home');
+    function handleNavigateToInicio() {
+        navigate('Inicio');
     }
 
     return (
@@ -41,10 +41,10 @@ function Landing() {
                         <Text style={styles.title2}>Acesse para continuar</Text>
 
                         <KeyboardAvoidingView>
-                            <TextInput style={styles.input} placeholder="Senha" />
+                            <TextInput style={styles.input} placeholder="Senha" secureTextEntry={true}/>
                         </KeyboardAvoidingView>
 
-                        <RectButton style={styles.button} onPress={handleNavigateToHomePage}>
+                        <RectButton style={styles.button} onPress={handleNavigateToInicio}>
                             <Text style={styles.login}>LOGIN</Text>
                         </RectButton>
                     </View>

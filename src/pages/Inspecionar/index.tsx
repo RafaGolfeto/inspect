@@ -11,12 +11,12 @@ import styles from './styles';
 function Inspecionar() {
     const { navigate } = useNavigation();
 
-    function handleNavigateToHomePage() {
-        navigate('Home')
+    function handleNavigateToInicioPage() {
+        navigate('Inicio')
     }
 
-    function handleNavigateToIniciarInspecao() {
-        navigate('IniciarInspencao')
+    function handleNavigateToQuestao() {
+        navigate('Questao')
     }
 
 
@@ -26,7 +26,7 @@ function Inspecionar() {
             <View style={styles.header}>
                 <View style={styles.botaoTextoLogo}>
                     <RectButton
-                        onPress={handleNavigateToHomePage}
+                        onPress={handleNavigateToInicioPage}
                         style={styles.voltar}
                     >
                         <Image source={voltar}></Image>
@@ -65,7 +65,7 @@ function Inspecionar() {
                     </TextInput>
 
                     <RectButton
-                        onPress={handleNavigateToIniciarInspecao}
+                        onPress={handleNavigateToQuestao}
                         style={styles.button}
                     >
                         <Text style={styles.iniciarInspecao}>INICIAR inspeção</Text>
