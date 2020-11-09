@@ -33,7 +33,7 @@ function InspecaoFinalizada() {
                             <Image source={inspencaoFinalizada} />
                         </View>
 
-                        <Text style={styles.textoInspecaoFinalizada}>Inspeção finalizada com </Text><Text style={styles.sucesso}>Sucesso</Text>
+                        <Text style={styles.textoInspecaoFinalizada}>Inspeção finalizada com <Text style={styles.sucesso}>Sucesso</Text></Text>
                     </View>
                     <View style={styles.containerBotao}>
                         <RectButton style={styles.botaoTelaInicial}

@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 19,
         color: '#737373',
-        paddingBottom: 400,
+        paddingBottom: 200,
         borderColor: '#b3b3b3',
         backgroundColor: '#FFFFFF',
         borderRadius: 10,

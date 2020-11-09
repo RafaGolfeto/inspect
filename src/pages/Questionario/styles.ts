@@ -80,22 +80,28 @@ const styles = StyleSheet.create({
     excluir: {
 
     },
-    
+
+    modal: {
+        height: 180,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
     containerButtonAndRegistro: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: "center",
-        paddingVertical: 10
+        paddingVertical: 10,
     },
 
     button: {
-        alignItems: "center",        
+        alignItems: "center",
         flexDirection: 'row',
         justifyContent: 'center',
         backgroundColor: '#179250',
         width: 137,
         height: 35,
-        borderRadius: 23
+        borderRadius: 23,
     },
 
     inserir: {
@@ -114,6 +120,52 @@ const styles = StyleSheet.create({
         lineHeight: 17,
         color: '#c5c5c5'
     },
+
+    botaoFecharModal: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 20,
+        paddingHorizontal: 145,
+    },
+
+    textoBotaoFechar: {
+        fontFamily: 'Montserrat_700Bold',
+        color: '#808080',
+        fontSize: 14,
+        lineHeight: 16,
+        alignItems: 'center',
+    },
+
+    containerFechar: {
+        marginBottom: 45,
+        marginHorizontal: 26,
+        justifyContent: "center",
+        borderBottomWidth: 1,
+        borderColor: '#f3f5fa',
+
+    },
+
+    divisoriaModal: {
+        width: 1,
+        backgroundColor: '#abacaf'
+    },
+
+    botaoExcluirRegistro: {
+        backgroundColor: '#F34F3A',
+        borderRadius: 77,
+        paddingVertical: 15,
+        paddingHorizontal: 90,
+    },
+
+    textoExcluirRegistro: {
+        fontFamily: 'Montserrat_700Bold',
+        fontSize: 16,
+        lineHeight: 20,
+        alignItems: "center",
+        color: '#ffffff'
+    }
+
+   
 });
 
 export default styles;

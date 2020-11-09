@@ -25,13 +25,14 @@ const styles = StyleSheet.create({
     },
 
     textoInspecaoFinalizada: {
+        textAlign: "center",
         fontFamily: 'Montserrat_700Bold',
         fontSize: 23,
         lineHeight: 28,
 
     },
 
-    sucesso: {        
+    sucesso: {    
         fontFamily: 'Montserrat_700Bold',
         fontSize: 23,
         lineHeight: 28,
@@ -39,7 +40,6 @@ const styles = StyleSheet.create({
     },
 
     containerBotao: {
-        marginBottom: 100,
         paddingBottom: 100
     },
 

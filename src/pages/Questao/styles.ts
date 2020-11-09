@@ -45,23 +45,28 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
 
-    numeroInspencao: {
+    botaoNumeroInspencao: {
         backgroundColor: '#179250',
         borderRadius: 77,
+        paddingHorizontal: 15,
+        paddingVertical: 5
+    },
+
+    numeroInspencao: {
         fontFamily: 'Montserrat_700Bold',
         color: '#FFFFFF',
         textTransform: "uppercase",
         fontSize: 16,
         textAlign: 'center',
-        padding: 8,
-        width: 130
     },
 
     bordaCarregamento: {
         borderRadius: 33,
         height: 5,
-        width: 190,
         backgroundColor: '#F1F1F1',
+        width: 110,
+        paddingHorizontal: 90,
+        marginRight: 5
     },
 
     textoCorpo: {
@@ -90,7 +95,7 @@ const styles = StyleSheet.create({
         paddingVertical: 30,
         marginRight: 10,
         alignItems: 'center',
-        flex: 1,        
+        flex: 1,
     },
 
     imagemButtonIrregularAnalisarERegular: {
@@ -110,7 +115,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5,
         paddingVertical: 30,
         alignItems: 'center',
-        flex: 1,        
+        flex: 1,
         marginLeft: 10,
     },
 
@@ -128,7 +133,7 @@ const styles = StyleSheet.create({
         paddingVertical: 30,
         marginLeft: 15,
         alignItems: 'center',
-        flex: 1,        
+        flex: 1,
     },
 
     textoRegular: {
@@ -150,13 +155,13 @@ const styles = StyleSheet.create({
     botaoImagem: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        paddingVertical: 20,      
+        paddingVertical: 20,
         marginRight: 15,
         alignItems: 'center',
-        flex: 1,        
+        flex: 1,
     },
 
-    textoImagem: {        
+    textoImagem: {
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 10,
         lineHeight: 12
@@ -165,14 +170,14 @@ const styles = StyleSheet.create({
     botaoVideo: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        paddingVertical: 20,      
+        paddingVertical: 20,
         marginRight: 15,
         alignItems: 'center',
-        flex: 1,  
+        flex: 1,
 
     },
 
-    textoVideo: {   
+    textoVideo: {
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 10,
         lineHeight: 12
@@ -181,14 +186,14 @@ const styles = StyleSheet.create({
     botaoArquivo: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        paddingVertical: 20,      
+        paddingVertical: 20,
         marginRight: 15,
         alignItems: 'center',
-        flex: 1,  
+        flex: 1,
 
     },
 
-    textoArquivo: {   
+    textoArquivo: {
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 10,
         lineHeight: 12
@@ -197,14 +202,14 @@ const styles = StyleSheet.create({
     botaoAnotacao: {
         borderRadius: 10,
         backgroundColor: '#f3f5fa',
-        paddingVertical: 20,      
+        paddingVertical: 20,
         marginRight: 10,
         alignItems: 'center',
-        flex: 1,  
+        flex: 1,
 
     },
 
-    textoAnotacao: {   
+    textoAnotacao: {
         fontFamily: 'Montserrat_600SemiBold',
         fontSize: 10,
         lineHeight: 12
@@ -215,20 +220,20 @@ const styles = StyleSheet.create({
     },
 
     botaoProximo: {
-        paddingHorizontal: 138,
-        paddingVertical: 15,
-        marginBottom: 15,
         backgroundColor: '#179250',
         borderRadius: 77,
+        marginBottom: 20,
+        paddingHorizontal: 30
     },
 
-    textoProxino: {
+    textoProximo: {
         fontFamily: 'Montserrat_700Bold',
-        textTransform: "uppercase",
         color: '#FFFFFF',
+        textTransform: "uppercase",
         fontSize: 16,
-        lineHeight: 20,
         textAlign: 'center',
+        padding: 15,
+        paddingHorizontal: 80
     },
 
     botaoVoltar: {
@@ -242,6 +247,156 @@ const styles = StyleSheet.create({
         lineHeight: 16,
         textAlign: "center"
     },
+
+    botao: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 20
+    },
+
+    textoBotaoFechar: {
+        fontFamily: 'Montserrat_700Bold',
+        color: '#808080',
+        fontSize: 14,
+        lineHeight: 16,
+        alignItems: 'center',
+    },
+
+    containerFechar: {
+        marginBottom: 45,
+        marginHorizontal: 26,
+        justifyContent: "center",
+        borderBottomWidth: 1,
+        borderColor: '#f3f5fa',
+
+    },
+
+    containerModal: {
+
+    },
+
+    containerTitle: {
+        justifyContent: "flex-start",
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+
+    itemnInspect: {
+        marginHorizontal: 26,
+        flexDirection: 'row',
+        justifyContent: "space-between",
+        backgroundColor: '#F3F5FA',
+        borderRadius: 10,
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+
+    title: {
+        paddingLeft: 12,
+    },
+
+    titleInspect: {
+        fontFamily: 'Montserrat_300Light',
+        fontSize: 12,
+        lineHeight: 14,
+        maxWidth: '80%'
+    },
+
+
+    divisoriaESelecionar: {
+        flexDirection: 'row',
+        alignItems: "center",
+        marginRight: 20,
+    },
+
+    divisoria: {
+        width: 1,
+        height: 20,
+        marginVertical: 20,
+        marginHorizontal: 16,
+        backgroundColor: '#abacaf'
+    },
+
+    selecionar: {
+        width: 20,
+        backgroundColor: '#61BC48',
+        borderRadius: 10,
+        height: 20,
+    },
+
+
+    imageTitleAndDate: {
+        justifyContent: "flex-start",
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+
+    titleAndDate: {
+        paddingLeft: 12
+    },
+
+    titleInspec: {
+        fontFamily: 'Montserrat_600SemiBold',
+        fontSize: 14,
+        lineHeight: 17
+    },
+
+    data: {
+        fontFamily: 'Montserrat_500Medium',
+        fontSize: 9,
+        lineHeight: 11,
+        color: '#7a7b7d'
+    },
+    divisoriaContainerBotaoExcluir: {
+        flexDirection: 'row',
+        alignItems: "center",
+    },
+
+    containerBotaoExcluirImagem: {
+        marginRight: 30,
+    },
+
+    botaoExcluirImagem: {
+
+    },
+
+
+    containerBotaoInserirImagem: {
+        padding: 26,
+    },
+
+    botaoInserirImagem: {
+        marginTop: 30,
+        backgroundColor: '#179250',
+        borderRadius: 77,
+    },
+
+    textoBotaoInserirImagem: {
+        fontFamily: 'Montserrat_700Bold',
+        color: '#FFFFFF',
+        textTransform: "uppercase",
+        fontSize: 16,
+        textAlign: 'center',
+        padding: 15,
+    },
+
+    textoModalAnotacao: {
+        fontFamily: 'Montserrat_500Medium',
+        fontSize: 16,
+        lineHeight: 19,
+        color: '#737373',
+        borderColor: '#b3b3b3',
+        backgroundColor: '#FFFFFF',
+        borderRadius: 10,
+    },
+
+    bordaTextoModalAnotacao: {   
+        margin: 26,
+        padding: 15,     
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#BEBEBE',
+    }
 
 });
 

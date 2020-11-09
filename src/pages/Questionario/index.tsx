@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import { Image, Text, View } from 'react-native';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import { Modalize } from 'react-native-modalize'
@@ -26,6 +26,16 @@ function Questionario() {
 
     function handleNavigateToAlterarQuestao() {
         navigate('AlterarQuestao')
+    }
+
+    const modalizeRef = useRef<Modalize>(null);
+
+    const onOpen = () => {
+        modalizeRef.current?.open();
+    }
+
+    const close = () => {
+        modalizeRef.current?.close();
     }
 
     return (
@@ -63,13 +73,35 @@ function Questionario() {
                             </RectButton>
                         </View>
                         <View style={styles.excluir}>
-                            <RectButton
+                            <RectButton onPress={onOpen}
                             >
                                 <Image source={excluir} />
                             </RectButton>
                         </View>
                     </View>
                 </View>
+                <Modalize
+                    ref={modalizeRef}
+                    snapPoint={120}
+                >
+                    <View style={styles.modal}>
+                        <View style={styles.containerFechar}>
+                            <RectButton onPress={close}
+                                style={styles.botaoFecharModal}
+                            >
+                                <Text style={styles.textoBotaoFechar}>FECHAR</Text>
+                            </RectButton>
+
+                        </View>
+
+                        <View>
+                            <RectButton style={styles.botaoExcluirRegistro}>
+                                <Text style={styles.textoExcluirRegistro}>EXCLUIR REGISTRO</Text>
+                            </RectButton>
+                        </View>
+                    </View>
+
+                </Modalize>
 
                 <View style={styles.containerButtonAndRegistro}>
                     <RectButton

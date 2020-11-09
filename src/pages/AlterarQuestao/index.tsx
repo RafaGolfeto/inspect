@@ -35,7 +35,10 @@ function AlterarQuestao() {
             <View style={styles.containertextoCorpoAndButton}>
 
                 <View style={styles.bordaTextoCorpo}>
-                    <TextInput style={styles.textoCorpo} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis justo a pellentesque facilisis. Sed porta at arcu vitae rutrum. Nulla fermentum nisl vel nunc posuere laoreet. Sed vel tempus purus." />
+                    <TextInput 
+                        multiline={true}
+                        numberOfLines={4} 
+                        style={styles.textoCorpo} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis justo a pellentesque facilisis. Sed porta at arcu vitae rutrum. Nulla fermentum nisl vel nunc posuere laoreet. Sed vel tempus purus." />
                 </View>
 
                 <View style={styles.containerButton}>
