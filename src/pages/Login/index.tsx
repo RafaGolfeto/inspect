@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Alert, Image, ImageBackground, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { RectButton } from 'react-native-gesture-handler';
+import { RectButton, State } from 'react-native-gesture-handler';
 
 import styles from './styles';
 
 import landingImg from '../../assets/images/landing.png';
 
-function Landing() {
+
+const Landing = () => {
+    const [senha, onChangeText] = React.useState('');
+
     const { navigate } = useNavigation();
 
+
     function handleNavigateToInicio() {
-        navigate('Inicio');
+        if (senha === '123') {
+            navigate('Inicio');
+        } else {
+            Alert.alert("ATENÇÃO", "senha incorreta")
+        }
+
     }
+
+
+
+
+
 
     return (
 
@@ -41,11 +55,22 @@ function Landing() {
                         <Text style={styles.title2}>Acesse para continuar</Text>
 
                         <KeyboardAvoidingView>
-                            <TextInput style={styles.input} placeholder="Senha" secureTextEntry={true}/>
+                            <TextInput
+                                style={styles.input}
+                                placeholder="Senha"
+                                secureTextEntry={true}
+                                onChangeText={text => onChangeText(text)}
+
+                            />
                         </KeyboardAvoidingView>
 
-                        <RectButton style={styles.button} onPress={handleNavigateToInicio}>
-                            <Text style={styles.login}>LOGIN</Text>
+                        <RectButton
+                            style={styles.button}
+                            onPress={handleNavigateToInicio}
+                        >
+                            <Text
+                                style={styles.login}
+                            >LOGIN</Text>
                         </RectButton>
                     </View>
 

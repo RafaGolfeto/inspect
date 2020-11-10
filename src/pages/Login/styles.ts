@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     },
 
     containertopo: {
+        alignItems: "center",
         marginTop: 80
     },
 
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
     },
 
     logo: {
+        alignItems: "center",
         height: 72,
         width: 255,
     },

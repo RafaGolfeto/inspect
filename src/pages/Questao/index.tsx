@@ -359,8 +359,8 @@ function IniciarInspencao() {
 
                             <TextInput
                                 multiline={true}
-                                numberOfLines={6}
-                                style={styles.textoModalAnotacao} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis justo a pellentesque facilisis. Sed porta at arcu vitae rutrum. Nulla fermentum nisl vel nunc posuere laoreet. Sed vel tempus purus." />
+                                numberOfLines={10}
+                                style={styles.textoModalAnotacao}/>
 
                         </View>
 

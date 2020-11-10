@@ -124,8 +124,8 @@ const styles = StyleSheet.create({
     botaoFecharModal: {
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 20,
-        paddingHorizontal: 145,
+        paddingVertical: 20,
+        paddingHorizontal: 27
     },
 
     textoBotaoFechar: {
@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         lineHeight: 16,
         alignItems: 'center',
+        paddingHorizontal: 95,
     },
 
     containerFechar: {

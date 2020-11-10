@@ -392,7 +392,8 @@ const styles = StyleSheet.create({
 
     bordaTextoModalAnotacao: {   
         margin: 26,
-        padding: 15,     
+        paddingVertical: 15,
+        paddingHorizontal: 15,     
         borderRadius: 10,
         borderWidth: 1,
         borderColor: '#BEBEBE',
