@@ -35,12 +35,12 @@ function ImportarInserir() {
             tx.executeSql('INSERT INTO table_questionario (questionario_name) VALUES (?)', [questionarioName], (tx, success) => {
                 if (success.rowsAffected > 0) {
                     Alert.alert(
-                        'Success',
-                        'You are Registered Successfully',
+                        'Parabéns',
+                        'Questionário registrado com sucesso',
                         [
                             {
                                 text: 'Ok',
-                                onPress: () => navigate('Questionario',),
+                                onPress: () => navigate('Checklist'),
                             },
                         ],
                         { cancelable: false }
