@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Image, Text, View } from 'react-native';
 import { FlatList, RectButton, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import { NativeRouter, Route, Link } from 'react-router-native';
 
 import styles from './styles';
 
@@ -10,16 +11,23 @@ import voltar from '../../assets/images/icons/botaoVoltar.png';
 import inserir from '../../assets/images/icons/inserir.png';
 import importar from '../../assets/images/icons/importar.png';
 
+
+
+
 import { DatabaseConnection } from '../../database/database-connection'
 
 function Checklist() {
 
     const { navigate } = useNavigation();
-    let [flatListItems, setFlatListItems] =  useState<any[]>([]);
-    
+    let [flatListItems, setFlatListItems] = useState<any[]>([]);
+
     function handleNavigateToInicioPage() {
         navigate('Inicio');
     }
+    function handleNavigateToQuestionario() {
+        navigate('Questionario');
+    }
+
     function handleNavigateToImportarInserir() {
         navigate('ImportarInserir');
     }
@@ -32,7 +40,7 @@ function Checklist() {
         db.transaction((tx) => {
             tx.executeSql('SELECT * FROM table_questionario', [], (tx, results) => {
                 const listQuestionario = [];
-                for (let i = 0; i < results.rows.length; ++i){
+                for (let i = 0; i < results.rows.length; ++i) {
                     listQuestionario.push(results.rows.item(i));
                 }
                 setFlatListItems(listQuestionario);
@@ -82,8 +90,11 @@ function Checklist() {
                     </View>
 
                     {flatListItems.map((item) => {
+
                         return (
-                            <View key={item.questionario_id} style={styles.itemnInspect}>
+                            <RectButton onPress={handleNavigateToQuestionario}
+                                key={item.questionario_id} style={styles.itemnInspect}>
+                                    
                                 <View style={styles.containerTitleAndDate}>
                                     <View style={styles.titleAndDate}>
                                         <Text style={styles.titleInspect}>{item.questionario_name}</Text>
@@ -97,8 +108,8 @@ function Checklist() {
                                         <Text style={styles.totalNum}>45</Text>
                                     </View>
                                 </View>
-                            </View>
-                        )
+                            </RectButton>
+                        );
                     })}
 
                 </View>
