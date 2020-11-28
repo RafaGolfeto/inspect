@@ -37,24 +37,14 @@ function Inicio() {
             <View style={styles.header}>
                 <View style={styles.logoAndButton}>
                     <Image source={home} style={styles.logo}></Image>
-
-                    <RectButton
-                        onPress={handleNavigateToLoginPage}
-                        style={styles.voltarHome}>
-                        <Image source={botaoVoltarHome} ></Image>
-
+                    <RectButton onPress={handleNavigateToLoginPage} style={styles.voltarHome}>
+                        <Image source={botaoVoltarHome} style={styles.voltarHome}></Image>
                     </RectButton>
                 </View>
 
                 <View>
-                    <Text style={styles.h1}>
-                        Escolha umas das{"\n"}opções para Começar
-                </Text>
-
-                    <TextInput
-                        style={styles.pesquisa}
-                        placeholder="Procurar por empresas" >
-                    </TextInput>
+                    <Text style={styles.h1}>Escolha umas das{"\n"}opções para Começar</Text>
+                    <TextInput style={styles.pesquisa} placeholder="Procurar por empresas"></TextInput>
                 </View>
 
             </View>

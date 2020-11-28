@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
 
     botaoExcluirRegistro: {
         backgroundColor: '#F34F3A',
-        borderRadius: 77,
+        borderRadius: 25,
         paddingVertical: 15,
         paddingHorizontal: 90,
     },

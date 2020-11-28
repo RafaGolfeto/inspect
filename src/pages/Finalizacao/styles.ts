@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 
     botaoTelaInicial: {
         backgroundColor: '#179250',
-        borderRadius: 77,
+        borderRadius: 25,
         padding: 15
     },
 

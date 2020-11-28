@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
 
     button: {
         backgroundColor: '#179250',
-        borderRadius: 77,
+        borderRadius: 25,
     },
 
     login: {

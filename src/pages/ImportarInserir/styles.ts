@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     button: {
         marginTop: 30,
         backgroundColor: '#179250',
-        borderRadius: 77,
+        borderRadius: 25,
     },
 
     salvar: {

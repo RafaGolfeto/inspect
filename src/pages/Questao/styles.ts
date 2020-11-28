@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 
     botaoNumeroInspencao: {
         backgroundColor: '#179250',
-        borderRadius: 77,
+        borderRadius: 25,
         paddingHorizontal: 15,
         paddingVertical: 5
     },
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
 
     botaoProximo: {
         backgroundColor: '#179250',
-        borderRadius: 77,
+        borderRadius: 25,
         marginBottom: 20,
         paddingHorizontal: 30
     },
@@ -368,7 +368,7 @@ const styles = StyleSheet.create({
     botaoInserirImagem: {
         marginTop: 30,
         backgroundColor: '#179250',
-        borderRadius: 77,
+        borderRadius: 25,
     },
 
     textoBotaoInserirImagem: {
