@@ -24,10 +24,6 @@ function Checklist() {
     function handleNavigateToInicioPage() {
         navigate('Inicio');
     }
-    function handleNavigateToQuestionario() {
-        navigate('Questionario');
-    }
-
     function handleNavigateToImportarInserir() {
         navigate('ImportarInserir');
     }
@@ -92,7 +88,14 @@ function Checklist() {
                     {flatListItems.map((item) => {
 
                         return (
-                            <RectButton onPress={handleNavigateToQuestionario}
+                            <RectButton
+
+                            onPress={() => {
+                                navigate('Questionario', {
+                                    itemId: item.questionario_id
+                                });
+                            }}
+
                                 key={item.questionario_id} style={styles.itemnInspect}>
                                     
                                 <View style={styles.containerTitleAndDate}>

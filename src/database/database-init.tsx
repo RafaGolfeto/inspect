@@ -19,7 +19,8 @@ export default class DatabaseInit {
 
         var sql = [
             `DROP TABLE IF EXISTS table_questionario;`,
-            `create table if not exists table_questionario (questionario_id integer primary key autoincrement,questionario_name text);`
+            `create table if not exists table_questionario (questionario_id integer primary key autoincrement,questionario_name text, questionario_data text);`,
+            `create table if not exists table_questao (questao_id integer primary key autoincrement,questionario_id integer, questao_name text);`
         ];
 
         db.transaction(

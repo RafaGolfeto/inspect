@@ -30,19 +30,27 @@ function ImportarInserir() {
 
         db.transaction(function (tx) {
 
-            console.log(questionarioName);
+            const today = new Date();
+            let dataDia = ((today.getDate() < 10) ? '0' : '') + today.getDate();
+            let dataMes = ((today.getMonth() < 10) ? '0' : '') + today.getMonth();
+            let dataAno = today.getFullYear();
+            let dataHora = ((today.getHours() < 10) ? '0' : '') + today.getHours();
+            let dataMinuto = ((today.getMinutes() < 10) ? '0' : '') + today.getMinutes();
+            const todayDB = `${dataDia}/${dataMes}/${dataAno} ${dataHora}:${dataMinuto}`;
 
-            tx.executeSql('INSERT INTO table_questionario (questionario_name) VALUES (?)', [questionarioName], (tx, success) => {
+            tx.executeSql('INSERT INTO table_questionario (questionario_name,questionario_data) VALUES (?,?)', [questionarioName,todayDB], (tx, success) => {
                 if (success.rowsAffected > 0) {
+
+                    let questionarioId = success.insertId;
+
                     Alert.alert(
                         'Parabéns',
-                        'Questionário registrado com sucesso',
-                        [
-                            {
-                                text: 'Ok',
-                                onPress: () => navigate('Checklist'),
-                            },
-                        ],
+                        'Questionário registrado com sucesso',[{
+                            text: 'Ok',
+                            onPress: () => navigate('Questionario', {
+                                itemId: questionarioId
+                            }),
+                        }],
                         { cancelable: false }
                     );
                 }
@@ -51,79 +59,6 @@ function ImportarInserir() {
                 }
             });
         });
-
-
-        /*
-        
-        ,(tx,e) => {
-            console.log(tx);
-            console.log(e);
-        }
-        
-        */
-
-        /*
-        tx.exec('INSERT INTO table_questionario (questionario_name) VALUES (?)',[questionarioName],(tx, results) => {
-
-            console.log('2222');
-            console.log(results);
-            console.log(tx);
-            
-            Alert.alert('Por favor!');
-
-
-            if (results.rowsAffected > 0) {
-                Alert.alert(
-                    'Success',
-                    'You are Registered Successfully',
-                    [
-                        {
-                            text: 'Ok',
-                            onPress: () => navigate('Questionario'),
-                        },
-                    ],
-                    { cancelable: false }
-                );
-            }
-            else {
-                Alert.alert('Registration Failed');
-            }
-
-        });
-        */
-
-
-        /*
-
-        db.transaction(function (tx) {
-
-            tx.executeSql(
-                'INSERT INTO table_questionario (questionario_name) VALUES (?)',
-                [questionarioName],
-                (tx, results) => {
-                    if (results.rowsAffected > 0) {
-                        Alert.alert(
-                            'Sucesso',
-                            'Questionário cadastrado com sucesso',
-                            [
-                                {
-                                    text: 'Ok',
-                                    onPress: () => navigate('Questionario', {
-                                        itemId: results.insertId,
-                                        otherParam: questionarioName
-                                    }),
-                                },
-                            ],
-                            { cancelable: false }
-                        );
-                    }
-                    else {
-                        alert('Cadastro falhou, tente novamente');
-                    }
-                }
-            );
-        });
-        */
     }
 
     return (
