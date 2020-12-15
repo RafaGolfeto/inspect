@@ -18,31 +18,35 @@ import { DatabaseConnection } from '../../database/database-connection'
 
 function Checklist() {
 
-    const { navigate } = useNavigation();
+    const navigation = useNavigation();
     let [flatListItems, setFlatListItems] = useState<any[]>([]);
 
     function handleNavigateToInicioPage() {
-        navigate('Inicio');
+        navigation.navigate('Inicio');
     }
     function handleNavigateToImportarInserir() {
-        navigate('ImportarInserir');
+        navigation.navigate('ImportarInserir');
     }
     function handleNavigateToImportarPage() {
-        navigate('Importar');
+        navigation.navigate('Importar');
     }
 
-    useEffect(() => {
-        var db = DatabaseConnection.getConnection();
-        db.transaction((tx) => {
-            tx.executeSql('SELECT * FROM table_questionario', [], (tx, results) => {
-                const listQuestionario = [];
-                for (let i = 0; i < results.rows.length; ++i) {
-                    listQuestionario.push(results.rows.item(i));
-                }
-                setFlatListItems(listQuestionario);
-            });
-        })
-    }, []);
+    React.useEffect(() => {
+        const unsubscribe = navigation.addListener('focus', () => {
+            var db = DatabaseConnection.getConnection();
+            db.transaction((tx) => {
+                tx.executeSql('SELECT * FROM table_questionario', [], (tx, results) => {
+                    const listQuestionario = [];
+                    for (let i = 0; i < results.rows.length; ++i) {
+                        listQuestionario.push(results.rows.item(i));
+                    }
+                    setFlatListItems(listQuestionario);
+                });
+            })
+        });
+    
+        return unsubscribe;
+    }, [navigation]);
 
     return (
 
@@ -91,7 +95,7 @@ function Checklist() {
                             <RectButton
 
                             onPress={() => {
-                                navigate('Questionario', {
+                                navigation.navigate('Questionario', {
                                     itemId: item.questionario_id
                                 });
                             }}
