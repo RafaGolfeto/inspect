@@ -26,35 +26,28 @@ interface Questionario {
 
 function Questionario() {
 
-    const navigation = useNavigation();
+    const { navigate } = useNavigation();
     const [questionario, setQuestionario] = useState<Questionario>();
     const route = useRoute();
     const { itemId } = route.params as QuestionarioParams;
 
-    // useEffect(() => {
-
-        React.useEffect(() => {
-            const unsubscribe = navigation.addListener('focus', () => {
-                var db = DatabaseConnection.getConnection();
-                db.transaction((tx) => {
-                    tx.executeSql('SELECT * FROM table_questionario WHERE questionario_id = ? LIMIT 1', [itemId], (tx, results) => {
-                        console.log(results.rows.item(0));
-                        let resultadoQuestionario = results.rows.item(0)
-                        setQuestionario(resultadoQuestionario);
-                    });
-                });
-            });        
-            return unsubscribe;
-        }, [itemId]);
- 
-    // }, [itemId]);
+    useEffect(() => {
+        var db = DatabaseConnection.getConnection();
+        db.transaction((tx) => {
+            tx.executeSql('SELECT * FROM table_questionario WHERE questionario_id = ? LIMIT 1', [itemId], (tx, results) => {
+                console.log(results.rows.item(0));
+                let resultadoQuestionario = results.rows.item(0)
+                setQuestionario(resultadoQuestionario);
+            });
+        })
+    }, [itemId]);
     
     function handleNavigateToChecklistPage() {
-        navigation.navigate('Checklist')
+        navigate('Checklist')
     }
 
     function handleNavigateToAlterarQuestao() {
-        navigation.navigate('AlterarQuestao')
+        navigate('AlterarQuestao')
     }
 
     const modalizeRef = useRef<Modalize>(null);
